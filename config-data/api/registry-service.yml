@@ -1,12 +1,11 @@
-/home/brenda/Documentos/proyecto/config-data/api/registry-service/home/brenda/Documentos/proyecto/config-data/api/registry-service
 server:
   port: 8099
 
 eureka:
-  instance:
-    hostname: localhost
-  client:
-    register-with-eureka: false
-    fetchRegistry: false
-    service-url:
-      defaultZone: http://{eureka.instance.hostname}:{server.server}/eureka
+    instance:
+        hostname: localhost
+    client:
+        register-with-eureka: false
+        fetchRegistry: false
+        service-url:
+            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
